@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    container_name: db_mariadb
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./frameworks_and_drivers/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+      start_period: 1m
+      interval: 1m
+      timeout: 5s
+      retries: 3
+    networks:
+      - api_network
+
+networks:
+  api_network:
+    driver: bridge

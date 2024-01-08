@@ -1,0 +1,33 @@
+# Python Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+app/frameworks_and_drivers/mariadb/mydatabase
+app/frameworks_and_drivers/mariadb/mysql
+app/frameworks_and_drivers/mariadb/performance_schema
+app/frameworks_and_drivers/mariadb/sys
+app/frameworks_and_drivers/mariadb/.my-healthcheck.cnf
+app/frameworks_and_drivers/mariadb/aria_log_control
+app/frameworks_and_drivers/mariadb/aria_log.00000001
+app/frameworks_and_drivers/mariadb/ddl_recovery.log
+app/frameworks_and_drivers/mariadb/ib_buffer_pool
+app/frameworks_and_drivers/mariadb/ib_logfile0
+app/frameworks_and_drivers/mariadb/ibdata1
+app/frameworks_and_drivers/mariadb/ibtmp1
+app/frameworks_and_drivers/mariadb/mariadb_upgrade_info
+app/frameworks_and_drivers/mariadb/multi-master.info
+app/frameworks_and_drivers/mariadb/tc.log
+app/frameworks_and_drivers/mariadb/undo001
+app/frameworks_and_drivers/mariadb/undo002
+app/frameworks_and_drivers/mariadb/undo003
